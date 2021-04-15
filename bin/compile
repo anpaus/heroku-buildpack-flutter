@@ -60,8 +60,8 @@ if [ -n "$FLUTTER_VERSION" ]; then
 else
 
   print "Running flutter upgrade command"
-  if [ "$channel" != "stable" ]; then
-    flutter/bin/flutter channel stable | indent
+  if [ "$channel" != "master" ]; then
+    flutter/bin/flutter channel master | indent
   fi
 
   flutter/bin/flutter upgrade --quiet | indent
